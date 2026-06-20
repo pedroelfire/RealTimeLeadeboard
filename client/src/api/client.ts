@@ -4,6 +4,7 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
   const hasBody = options?.body != null;
   const res = await fetch(`${API_BASE}${url}`, {
     headers: hasBody ? { "Content-Type": "application/json" } : undefined,
+    credentials: "include",
     ...options,
   });
   if (!res.ok) {

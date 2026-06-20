@@ -3,7 +3,7 @@ package com.usermanagement.dto.request;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public class CreateUserRequestDto {
+public class RegisterRequestDto {
 
     @NotBlank(message = "Email is required")
     @Email(message = "Invalid email format")
@@ -15,10 +15,10 @@ public class CreateUserRequestDto {
     @NotBlank(message = "Password is required")
     private String password;
 
-    public CreateUserRequestDto() {
+    public RegisterRequestDto() {
     }
 
-    public CreateUserRequestDto(String email, String name, String password) {
+    public RegisterRequestDto(String email, String name, String password) {
         this.email = email;
         this.name = name;
         this.password = password;

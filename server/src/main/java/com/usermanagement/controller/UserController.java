@@ -1,5 +1,6 @@
 package com.usermanagement.controller;
 
+import com.usermanagement.constant.UserConstants;
 import com.usermanagement.dto.request.CreateUserRequestDto;
 import com.usermanagement.dto.request.UpdateUserRequestDto;
 import com.usermanagement.dto.response.UserResponseDto;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping(UserConstants.USERS_PATH)
 public class UserController {
 
     private final UserService userService;
